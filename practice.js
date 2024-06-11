@@ -376,7 +376,7 @@ function  selectionSort(arr){
             [arr[i],arr[minIndex]]=[arr[minIndex],arr[i]]
         }
     }
-    return arr
+    return  arr
 }
 
 const array = [4,2,8,1,9,7,3]
