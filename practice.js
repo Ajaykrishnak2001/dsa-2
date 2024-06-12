@@ -363,28 +363,145 @@
 // console.log(insertionsort(arr));
 
 
-function  selectionSort(arr){
-    for(let i=0;i<arr.length;i++){
-        let minIndex=i
-        for(let j=i+1  ;j<arr.length;j++){
-            if(arr[j]<arr[minIndex]){
-                minIndex=j
-            }
-        }
+// function  selectionSort(arr){
+//     for(let i=0;i<arr.length;i++){
+//         let minIndex=i
+//         for(let j=i+1  ;j<arr.length;j++){
+//             if(arr[j]<arr[minIndex]){
+//                 minIndex=j
+//             }
+//         }
 
-        if(minIndex!==i){
-            [arr[i],arr[minIndex]]=[arr[minIndex],arr[i]]
+//         if(minIndex!==i){
+//             [arr[i],arr[minIndex]]=[arr[minIndex],arr[i]]
+//         }
+//     }
+//     return  arr
+// }
+
+// const array = [4,2,8,1,9,7,3]
+// console.log(selectionSort(array));
+
+
+
+
+// function mergeSort(arr){
+//     if(arr.length-1<2){
+//         return arr;
+
+//     }
+
+//     let middleIndex=Math.floor(arr.length/2);
+//     let left=arr.slice(0,middleIndex)
+//     let right=arr.slice(middleIndex);
+//     return merge(mergeSort(left),mergeSort(right));
+// }
+
+
+// function merge(left,right){
+//     let sortedarr=[]
+//     while(left.length && right.length){
+//         if(left[0]<right[0]){
+//             sortedarr.push(left.shift())
+//         }else{
+//             sortedarr.push(right.shift())
+//         }
+//     }
+//     return [...sortedarr,...left,...right]
+// }
+
+
+
+// const array = [1, 3, 9, 4, 2, 7, 5, 6, 8];
+// // Define an example array to be sorted.
+
+// console.log(mergeSort(array));
+
+
+
+// function mergeSort(arr){
+//     if(arr.length<2){
+//         return arr
+//     }
+//     let middleIndex=Math.floor(arr.length/2)
+//     let left=arr.slice(0,middleIndex)
+//     let right=arr.slice(middleIndex)
+//     return merge(mergeSort(left),mergeSort(right))
+// }
+
+
+// function merge(left,right){
+//     let sortedarr=[]
+//     while(left.length && right.length){
+//         if(left[0]<right[0]){
+//             sortedarr.push(left.shift())
+//         }else{
+//             sortedarr.push(right.shift())
+//         }
+//     }
+//     return[...sortedarr,...left,...right]
+// }
+
+
+
+
+// const array = [1, 3, 9, 4, 2, 7, 5, 6, 8];
+// // Define an example array to be sorted.
+
+// console.log(mergeSort(array));
+
+
+
+
+// function mergeSort(arr){
+//     if(arr.length<2){
+//         return
+//     }
+
+//     let middleIndex=Math.floor(arr.length/2)
+//     let left=arr.slice(0,middleIndex)
+//     let right=arr.slice(middleIndex)
+//     return merge(mergeSort(left),mergeSort(right))
+// }
+
+// function merge(left,right){
+//     let sortedarr=[]
+//     while(left.length && right.length){
+//         if(left[0]<right[0]){
+//             sortedarr.push(left.shift())
+//         }else{
+//             sortedarr.push(right.shift())
+//         }
+//     }
+
+//     return[...sortedarr,...left,...right]
+// }
+
+
+// const array = [1, 3, 9, 4, 2, 7, 5, 6, 8];
+// // Define an example array to be sorted.
+
+// console.log(mergeSort(array));
+// // Call mergeSort on the example array and log the sorted result to the console.
+
+
+
+
+
+function quicksort(arr){
+    if(arr.length<2){
+        return arr
+    }
+
+    let n=arr.length
+    let pivot=arr[n-1]
+    let left=[];right=[];
+    for(let i=0;i<n-1;i++){
+        if(arr[i]<pivot){
+            left.push(arr[i])
+        }else{
+            right.push(arr[i])
         }
     }
-    return  arr
+    return [...quicksort(left),pivot]
 }
-
-const array = [4,2,8,1,9,7,3]
-console.log(selectionSort(array));
-
-
-
-
-
-
-

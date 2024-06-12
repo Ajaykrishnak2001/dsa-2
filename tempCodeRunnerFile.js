@@ -1,2 +1,9 @@
-const array = [4,2,8,1,9,7,3]
-console.log(selectionsort(array));
+
+
+
+
+// const array = [1, 3, 9, 4, 2, 7, 5, 6, 8];
+// // Define an example array to be sorted.
+
+// console.log(mergeSort(array));
+
